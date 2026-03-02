@@ -1,0 +1,185 @@
+% ============================================================
+% S-ART — OBC Planification and Control Documentation (TMS570)
+% Mirrors the structure/format of the Avionics/EPS document.
+% ============================================================
+
+
+
+% ============================================================
+% 1. Resumen Ordenado de la Situación Actual
+% ============================================================
+\chapter{Resumen Ordenado de la Situación Actual}
+
+\section{Punto de Partida}
+El proyecto S-ART entra en una fase en la que se requiere consolidar el diseño del \textbf{Ordenador de a Bordo (OBC)} como elemento central de la aviónica, actuando como coordinador de modos de vuelo, telemetría/telecomandos, y enlace lógico con EPS, COMMS, Payload y ADCS.
+
+Se fija como decisión de sistema el uso del microcontrolador \textbf{Por Definir} como núcleo del OBC. El objetivo a \textbf{3 meses} es:
+\begin{itemize}
+  \item Definir y congelar \textbf{requisitos (SRD)} e \textbf{interfaces (ICD)} del OBC.
+  \item Diseñar la \textbf{arquitectura HW por bloques} (core/power/interfaces) y la \textbf{arquitectura SW} (capas, servicios, modos, FDIR mínimo).
+  \item Generar \textbf{esquemáticos finales} en ECAD (KiCad/Altium) y un \textbf{plan de verificación/bring-up} incremental.
+\end{itemize}
+
+\section{Plan Maestro Técnico (Niveles de Desarrollo)}
+\textbf{Nivel 1 (Capa Core HW):} Arranque robusto del \textbf{Por Definir Microprocesador}: reloj, reset, boot-modes, JTAG/debug, estrategia de memoria y líneas mínimas de supervisión.
+
+\textbf{Nivel 2 (Capa de Potencia y Supervisión HW):} Árbol de alimentación del OBC (rails, protecciones, márgenes), watchdogs (interno/externo si aplica), señales de reset distribuido y líneas de “kill/reboot” hacia subsistemas críticos (según arquitectura del sistema).
+
+\textbf{Nivel 3 (Capa de Servicios SW):} HAL/Drivers + servicios base: telemetría y housekeeping, command handling, almacenamiento, scheduler/RTOS (si aplica), y registros/eventos para diagnóstico.
+
+\textbf{Nivel 4 (Integración con Aviónica):} Definición exhaustiva de la interfaz entre el OBC y el resto de subsistemas. Este nivel especificará:
+\begin{itemize}
+  \item \textbf{Alimentación:} Rails desde EPS hacia OBC (tensión, rizado admisible, tolerancias, secuencias).
+  \item \textbf{Listado de señales:} Mapeo de pines y buses (I2C/SPI/UART/CAN/GPIO/ADC si procede).
+  \item \textbf{Frecuencia de comunicación:} Velocidades/baudrates y tiempos de servicio.
+  \item \textbf{Comandos y telemetría:} Set mínimo de comandos críticos y campos de TM para FDIR.
+\end{itemize}
+
+% ============================================================
+% 2. Listado de Entregables Documentales
+% ============================================================
+\chapter{Listado de Entregables Documentales}
+
+Para tener un control claro de los resultados esperados del equipo de OBC, se define la siguiente lista de entregables formales con su formato correspondiente:
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}p{7.0cm}}
+\toprule
+\textbf{Entregable} & \textbf{Formato} & \textbf{Descripción} \\
+\midrule
+\endhead
+
+System Requirements Document (OBC-SRD) & PDF &
+Requisitos de alto nivel del OBC: funciones, modos, límites de consumo, márgenes, arranque, FDIR mínimo, restricciones térmicas/EMI y criterios de verificación. \\
+
+Interface Control Document (OBC-ICD) & Excel/PDF &
+Listado de señales y buses con EPS/COMMS/ADCS/Payload, frecuencias, niveles lógicos, pinout, comandos y telemetría mínima. \\
+
+OBC Architecture (HW/SW) & PDF / Notion &
+Diagrama por bloques HW (core/power/interfaces) + arquitectura SW (capas, drivers, servicios, modos y estados). \\
+
+Trade-Off Report (Periféricos) & PDF / Notion &
+Justificación técnica de componentes no-MCU: memorias, transceptores, level shifters, protecciones ESD/EMI, conectores, supervisores, etc. \\
+
+Schematics Package & PDF / Netlist &
+Planos eléctricos finales desarrollados en KiCad/Altium, estructurados por bloques jerárquicos. \\
+
+Test \& Verification Plan + Bring-up Checklist & PDF &
+Plan de verificación incremental: continuidad, rails, arranque, periféricos, interfaces, watchdog/reset y pruebas de robustez. \\
+
+Bring-up / Integration Report & PDF &
+Evidencias y resultados: medidas de rails, logs de arranque, pruebas de buses, errores encontrados y acciones correctivas. \\
+
+\bottomrule
+\caption{Matriz de entregables del proyecto OBC.}
+\end{longtable}
+
+% ============================================================
+% 3. Análisis y Gestión de Riesgos
+% ============================================================
+\chapter{Análisis y Gestión de Riesgos}
+
+En el diseño del OBC se contemplan los siguientes riesgos críticos, evaluando su impacto en el proyecto y medidas de mitigación:
+
+\section{Cambios de Interfaces (ICD) por Evolución de Subsistemas}
+\textbf{Descripción:} EPS/COMMS/ADCS/Payload modifican necesidades de bus, pinout o velocidades una vez iniciado el diseño.
+
+\textbf{Impacto:} Re-ruteo de placa, rediseño de conectores/level shifting y cambios de firmware; retraso significativo.
+
+\textbf{Mitigación:} Congelar \textbf{ICD v0.2} al final del Mes 1 y \textbf{ICD v0.3} (casi definitivo) al final de Semana 8. Cambios posteriores bajo control de configuración y con análisis de impacto.
+
+\section{Arranque No Robusto (Reset/Clock/Boot) y Fallos de Supervisión}
+\textbf{Descripción:} Errores en reset sequencing, reloj, configuración de boot-modes o ausencia de supervisión adecuada.
+
+\textbf{Impacto:} El OBC no inicia consistentemente o entra en estados indeterminados; riesgo de “brick” durante integración.
+
+\textbf{Mitigación:} Diseño core con revisión formal (schematic review), checklist de bring-up y pruebas tempranas de “boot mínimo” con instrumentación (UART/JTAG).
+
+\section{Complejidad del Software de Vuelo y FDIR Insuficiente}
+\textbf{Descripción:} Subestimación de la carga SW (drivers, scheduler, TM/TC, almacenamiento, modos) o ausencia de FDIR básico.
+
+\textbf{Impacto:} Integración bloqueada aunque el hardware sea correcto; fallos operacionales sin capacidad de recuperación.
+
+\textbf{Mitigación:} Definir desde Mes 1 un \textbf{MVP de Flight Software} (servicios mínimos + watchdog + logs). Validar la máquina de estados y comandos críticos antes del cierre de esquemáticos.
+
+\section{Interferencias EMI/ESD y Robustez de Interfaz}
+\textbf{Descripción:} Transitorios, ESD o EMI en buses y conectores (especialmente hacia COMMS).
+
+\textbf{Impacto:} Errores intermitentes difíciles de depurar, resets espurios, corrupción de datos.
+
+\textbf{Mitigación:} Protecciones ESD, buen retorno de masa, filtrado donde aplique, y revisión de layout para rutas críticas. Incluir pruebas de estrés en el plan de verificación.
+
+% ============================================================
+% 4. Separación de Roles Optimizada
+% ============================================================
+\chapter{Separación de Roles Optimizada}
+
+\section{Líderes de Proyecto (Ingeniería de Sistemas)}
+\textbf{Responsabilidad:} Definir SRD del OBC, asegurar coherencia con requisitos de misión y coordinar el cierre del ICD global. Validar cumplimiento y gestionar cambios.
+
+\textbf{Enfoque:} Decisiones a nivel de sistema, control de configuración y revisiones de integración.
+
+\section{Equipo de la Asignatura (Contratista de Hardware)}
+\textbf{Responsabilidad:} Ejecutar el diseño físico del OBC: esquemáticos, selección de periféricos, librerías/footprints y, si aplica, layout.
+
+\textbf{Enfoque:} ECAD, robustez eléctrica, diseño por bloques jerárquicos, y preparación de paquete final (schematics/netlist).
+
+\section{Equipo S-ART (Arquitectos de Lógica y Misión)}
+\textbf{Responsabilidad:} Definir modos de vuelo, telemetría/telecomandos, prioridades operacionales y FDIR mínimo.
+
+\textbf{Enfoque:} Máquina de estados, requisitos SW, listados de comandos y verificación funcional.
+
+\section{Agentes Dobles (Especialistas de COMMS/ADCS/Payload/EPS)}
+\textbf{Responsabilidad:} Proveer restricciones reales de sus subsistemas para cerrar el ICD: buses, pines, consumos, latencias, y requisitos de datos.
+
+\textbf{Enfoque:} Evitar “TBDs” en interfaces y asegurar compatibilidad con el diseño previo del satélite.
+
+% ============================================================
+% 5. Línea de Tiempo de Tareas
+% ============================================================
+\chapter{Línea de Tiempo de Tareas}
+
+Esta es la ruta crítica técnica, respetando el orden de dependencias estricto:
+
+\begin{enumerate}
+  \item \textbf{Definición de Requisitos (OBC-SRD):} Establecer funciones, modos mínimos, límites de consumo, políticas de reset/FDIR, y criterios de verificación.
+  \item \textbf{ICD preliminar (OBC-ICD v0.1):} Señales, buses, niveles, velocidades y pinout preliminar para coordinación temprana con EPS/COMMS/ADCS/Payload.
+  \item \textbf{Arquitectura HW/SW:} Bloques core/power/interfaces y arquitectura SW (capas, servicios, máquina de estados).
+  \item \textbf{Selección de periféricos (Trade-offs):} Memorias, transceptores, level shifters, ESD/EMI, supervisores, conectores.
+  \item \textbf{Revisión de integración:} Validar coherencia SRD/ICD vs restricciones reales de subsistemas.
+  \item \textbf{Captura de esquemáticos:} Diseño formal en ECAD por bloques jerárquicos.
+  \item \textbf{Plan de verificación/bring-up:} Checklist incremental y pruebas por etapas (continuidad, rails, boot, buses).
+  \item \textbf{Documentación final:} Cierre del paquete (SRD/ICD/arquitectura/esquemáticos/plan de test) y preparación de presentación académica.
+\end{enumerate}
+
+% ============================================================
+% 6. Planificación Semanal a 3 Meses
+% ============================================================
+\chapter{Planificación Semanal a 3 Meses}
+
+\section{Mes 1: Requisitos, Arquitectura e Interfaces}
+\textbf{Semana 1:} Líderes fijan el \textbf{OBC-SRD v0.1}. S-ART define modos mínimos, comandos críticos y TM base. Equipo de asignatura crea diagrama por bloques HW/SW.
+
+\textbf{Semana 2:} Cierre de \textbf{OBC-ICD v0.1}: listado de señales y buses con EPS/COMMS/ADCS/Payload (pinout preliminar). Revisión cruzada con EPS para alineación temprana de alimentación y reset.
+
+\textbf{Semana 3:} Diseño del \textbf{Core HW} del \textbf{Por Definir Microprocesador} (clock/reset/boot/JTAG) y estrategia de memoria. S-ART define el MVP de servicios SW (TM/TC/logs/watchdog).
+
+\textbf{Semana 4:} Diseño del \textbf{Power Tree} del OBC (rails, protecciones, supervisión). Congelar \textbf{OBC-SRD v1.0} y actualizar \textbf{OBC-ICD v0.2}.
+
+\section{Mes 2: Esquemáticos por Bloques y Plan de Verificación}
+\textbf{Semana 5:} Esquemáticos de \textbf{Interfaces} (I2C/SPI/UART/CAN, level shifting, ESD/EMI, conectores). Trade-off de periféricos no-MCU.
+
+\textbf{Semana 6:} Esquemáticos de \textbf{supervisión/robustez} (watchdog, reset distribuido, líneas de control a subsistemas si aplica) y revisión SRD/ICD vs diseño.
+
+\textbf{Semana 7:} Redacción del \textbf{Test \& Verification Plan} y \textbf{Bring-up Checklist} incremental. Preparación de librerías/footprints y reglas de diseño.
+
+\textbf{Semana 8:} Primer borrador jerárquico completo (\textbf{Schematics v0.8}). Publicación de \textbf{OBC-ICD v0.3} (casi definitivo). Gate interno tipo “PDR OBC”.
+
+\section{Mes 3: Layout (si aplica), Cierre Documental e Integración}
+\textbf{Semana 9:} Layout preliminar / revisión mecánica (si aplica). Revisión conjunta OBC-EPS-COMMS: conflictos de pinout, masas y rutas críticas.
+
+\textbf{Semana 10:} \textbf{Critical Design Review (CDR)} del OBC: revisión exhaustiva de esquemáticos frente a SRD/ICD y riesgos. Cierre de \textbf{Schematics v1.0}.
+
+\textbf{Semana 11:} Corrección de defectos y generación del \textbf{paquete final} (PDF/netlist, BOM, notas). Preparación del procedimiento de pruebas (instrumentación, logs).
+
+\textbf{Semana 12:} Consolidación final del \textbf{dossier OBC}: SRD + ICD + arquitectura + plan de verificación + esquemáticos + informe. Preparación de presentaciones académicas y plan de siguiente fase (prototipado/bring-up real).
+
