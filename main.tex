@@ -1,0 +1,45 @@
+\documentclass[11pt, oneside]{book}%%===============================================================================
+
+% 1. CONFIGURACIÓN GLOBAL
+% -----------------------
+% Definimos dónde buscar las imágenes
+\usepackage{graphicx}
+\graphicspath{{recursos/FIGURAS/}} 
+
+% Cargamos tus paquetes y estilos desde la carpeta 'recursos/config'
+\input{recursos/config/paquetes}
+\input{recursos/config/UAL.sty}
+\input{recursos/config/codigo.sty}
+%%============================================================================
+% 2. DATOS DEL TFG
+% ----------------
+%\input{recursos/config/datos}
+\pagestyle{cab} 
+\begin{document}
+
+% 3. PARTES PRELIMINARES
+% ----------------------
+\frontmatter
+\portada                     % Generada por UAL.sty
+\input{recursos/frontmatter/indices}
+%\input{recursos/frontmatter/resumen}
+
+% 4. CUERPO DEL TRABAJO
+% ---------------------
+\mainmatter
+\marcagua                    % Marca de agua de UAL.sty
+
+\input{recursos/CAPITULOS/maestro.tex}
+% 5. PARTES FINALES
+% -----------------
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{Bibliografía}
+%\bibliography{recursos/referencias}
+
+%\appendix
+%\input{recursos/backmatter/apendices}
+
+\clearpage
+%\input{recursos/backmatter/contraportada}
+
+\end{document}

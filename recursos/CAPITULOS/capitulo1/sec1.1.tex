@@ -1,0 +1,43 @@
+% -------------------------------------------------------------------
+
+\noindent El presente capítulo define la línea base (baseline) del subsistema de Potencia (EPS) y Aviónica, detallando el contexto del que se parte, las herramientas disponibles y el plan de desarrollo técnico a ejecutar en los próximos 3 meses.
+
+\section{Contexto del Proyecto y Legado (Herencia)}
+\noindent El proyecto actual no parte de cero, sino que se asienta sobre dos pilares fundamentales de información y diseño:
+\begin{itemize}
+    \item \textbf{Proyecto de Cursos Anteriores:} Se dispone del documento final y los diseños de los compañeros del año pasado. El estado actual de este legado es \textit{regular} y requiere una auditoría profunda. Sin embargo, permite reutilizar el trabajo base en subsistemas no críticos para la asignatura actual, focalizando los esfuerzos en reestructurar y mejorar el EPS y la Aviónica.
+    \item \textbf{Arquitecturas de Referencia (Ingeniería Inversa):} Contamos con esquemáticos profesionales de grado espacial como referencias (\texttt{EPS.pdf} y \texttt{AVIONICS\_BOARD.pdf}). Estos documentos marcan el estándar de calidad y topología (uso de PMICs, Load Switches dedicados y separación de tierras) al que debe llegar nuestro diseño en KiCad.
+    \item \textbf{Asesoría Técnica Externa:} A partir de reuniones recientes con ingenieros de FOSSA Systems, se han integrado al estado actual requerimientos realistas de misión, tales como la diferenciación de cargas de pago (RF vs. Óptica), operativas en eclipse y requisitos base para el \textit{Power Budget}.
+\end{itemize}
+
+\section{Estado Actual del Diseño Técnico}
+A nivel de ingeniería de detalle, el equipo se encuentra en una fase de transición entre un modelo puramente teórico y un diseño implementable:
+\begin{itemize}
+    \item \textbf{Simulación (PSIM):} Se han desarrollado y validado modelos funcionales de un convertidor Buck discreto con lazos de control PID básicos.
+    \item \textbf{Brecha Tecnológica a cubrir:} El modelo actual utiliza componentes y medidores ideales. El estado inmediatamente posterior requiere sustituir estos elementos teóricos por modelos físicos reales (evaluando capacidades parásitas, caídas de tensión y saturación).
+    \item \textbf{Objetivo a 3 meses:} Desarrollar la arquitectura completa del EPS y generar los esquemáticos finales (Schematics Package) y Netlists en software ECAD (KiCad/Altium), listos para el rutado de la PCB (Printed Circuit Board).
+\end{itemize}
+
+\section{Estructura de Recursos Humanos}
+La situación actual cuenta con una distribución atípica de personal que condiciona la planificación, dividida en tres fuerzas de trabajo interconectadas:
+\begin{itemize}
+    \item \textbf{Equipo de la Asignatura:} Disponen de tiempo y motivación ligados a la evaluación académica. Se encargarán del "músculo" técnico (cálculos, justificaciones, esquemáticos y simulaciones).
+    \item \textbf{Equipo SART (Proyecto Principal):} Ingenieros con menor disponibilidad de tiempo pero orientados a la arquitectura de sistema. Se enfocarán en el diseño lógico, máquinas de estados y revisión de requisitos.
+    \item \textbf{Agentes Dobles:} Miembros presentes en ambos grupos pero enfocados en disciplinas externas al EPS (Estructuras, ADCS, Comms). Su estado actual es vital para desbloquear restricciones físicas y de consumo sin interferir en la electrónica.
+\end{itemize}
+
+\section{Plan Maestro Técnico (Niveles de Desarrollo)}
+Para escalar desde el estado actual hasta el objetivo de vuelo, la arquitectura del EPS se ha estructurado en 4 niveles incrementales:
+
+\begin{itemize}
+    \item \textbf{Nivel 1 (Capa Sensorial HW):} Implementación de resistencias Shunt y amplificadores operacionales (\textit{Current Sense Amplifiers}) para el acondicionamiento de la señal de corriente y voltaje hacia el ADC del microcontrolador.
+    \item \textbf{Nivel 2 (Capa de Protección HW):} Integración de \textit{Load Switches} y fusibles electrónicos para aislar fallos, proteger la batería contra cortocircuitos y gestionar los picos de arranque (\textit{Inrush Current}), emulando la robustez de la arquitectura de referencia.
+    \item \textbf{Nivel 3 (Máquina de Estados SW):} Desarrollo de la lógica de control superior y gestión inteligente de la energía (modos nominal, eclipse, bajo consumo y fallo crítico).
+    \item \textbf{Nivel 4 (Integración con OBC):} Definición exhaustiva de la interfaz física y de datos entre el EPS y el Ordenador de a Bordo. Este nivel especificará:
+    \begin{itemize}
+        \item \textbf{Alimentación:} Líneas de tensión estabilizadas (ej. 3.3V, 5V) que alimentan al OBC y cargas útiles.
+        \item \textbf{Listado de señales:} Mapeo de pines (ADC, GPIOs, buses I2C/SPI).
+        \item \textbf{Frecuencia de comunicación:} Velocidades y protocolos de los buses de datos.
+        \item \textbf{Comandos recibidos:} Órdenes críticas desde el OBC (ej. "Apagar carga útil", "Reset del bus de 5V", "Transición a Safe Mode").
+    \end{itemize}
+\end{itemize}

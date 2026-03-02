@@ -1,0 +1,24 @@
+\section{ Cambios de Consumo de los Subsistemas}
+\begin{itemize}
+    \item \textbf{Descripción:} Los subsistemas (Radio, ADCS, Payload) modifican sus requerimientos de potencia una vez iniciada la fase de diseño electrónico.
+    \item \textbf{Impacto:} El Buck Converter o las bobinas podrían saturarse si la corriente demandada supera el diseño nominal, provocando caídas de tensión o daño térmico.
+    \item \textbf{Mitigación:} El \textit{Power Budget} debe estar congelado antes del Trade-Off. Se aplicará un factor de seguridad del 20-30\% al dimensionar la electrónica de potencia.
+\end{itemize}
+
+\section{ Indisponibilidad de Componentes (Supply Chain)}
+\begin{itemize}
+    \item \textbf{Descripción:} Los integrados seleccionados (ej. LTC3130, Load Switches específicos) no tienen stock en distribuidores (Mouser, Digikey) a la hora de fabricar.
+    \item \textbf{Impacto:} Obliga a rediseñar gran parte de los esquemáticos y las huellas (footprints) de la placa, retrasando semanas el proyecto.
+    \item \textbf{Mitigación:} Al realizar el Trade-Off, el Equipo de Asignatura debe verificar niveles de stock y seleccionar preferentemente componentes con alternativas \textit{pin-to-pin} compatibles.
+\end{itemize}
+
+\section{ Protecciones Mal Dimensionadas}
+\begin{itemize}
+    \item \textbf{Descripción:} Los umbrales de los Load Switches o fusibles electrónicos se calculan de manera incorrecta, siendo demasiado sensibles o demasiado permisivos.
+    \item \textbf{Impacto:} 
+    \begin{itemize}
+        \item \textit{Falsos positivos:} El EPS corta la energía durante un pico de arranque normal (ej. encendido de la radio), reiniciando el satélite.
+        \item \textit{Falsos negativos:} El EPS no actúa ante un cortocircuito real, provocando el colapso de la batería y la pérdida de la misión.
+    \end{itemize}
+    \item \textbf{Mitigación:} Simulación exhaustiva de transitorios en PSIM antes del diseño en KiCad, caracterizando perfectamente el pico de arranque (Inrush Current) de cada subsistema.
+\end{itemize}

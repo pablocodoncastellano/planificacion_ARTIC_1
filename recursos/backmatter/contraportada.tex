@@ -1,0 +1,24 @@
+\thispagestyle{empty}
+\put(0,0){
+\begin{minipage}[h]{0.9\paperwidth}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+    % Fondo
+    \node (f) [rectangle] at (current page.center)
+    {\parbox[b][\paperheight]{\paperwidth}{
+       % Asegúrate que esta imagen está en recursos/Figuras
+       %\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{}
+    }};
+    
+    % Texto del resumen
+    \node (texto) [rectangle,text width=0.5\paperwidth,yshift=150pt] at (f)
+    {\parbox{0.65\paperwidth}{\justifying \Large \color{white}
+        % Aquí cargamos el mismo texto del resumen que usamos al principio
+        \input{recursos/frontmatter/resumen} 
+    }};
+    
+    \node at (14,-25.55) {\Large\curso};
+\end{tikzpicture}
+\end{minipage}
+}
+

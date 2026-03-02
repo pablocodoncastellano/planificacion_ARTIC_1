@@ -1,0 +1,237 @@
+% ===========================================================================
+%                           CONFIGURACIÓN GENERAL (UAL.sty)
+% ===========================================================================
+% Descripción: Archivo de estilo principal para el TFG/Tesis.
+% Contiene: Paquetes, Colores, Diseño de página, Portada y Cabeceras.
+% ===========================================================================
+
+% --- 1. CARGA DE PAQUETES BÁSICOS ---
+% ---------------------------------------------------------------------------
+\RequirePackage[a4paper]{geometry} % Para márgenes
+\RequirePackage{tikz}              % Para dibujar (portada y cabeceras)
+\RequirePackage{fancyhdr}          % Para cabeceras y pies de página
+\RequirePackage{ifthen}            % Para lógica condicional
+\RequirePackage{xcolor}            % Para gestión de colores
+\RequirePackage[explicit]{titlesec}% Para personalizar títulos de capítulos
+\RequirePackage{afterpage}         % Para ejecutar comandos tras finalizar página
+\RequirePackage{transparent}       % Para marcas de agua transparentes
+\RequirePackage[scaled=0.95]{helvet} % Fuente Helvética (similar a Arial)
+\RequirePackage{pgfgantt}          % Para diagramas de Gantt
+
+
+% ===========================================================================
+% --- 2. PALETA DE COLORES ---
+% ===========================================================================
+% Aquí definimos todos los colores disponibles. Puedes usar cualquiera de estos
+% nombres (ej. \color{RedDark}) en cualquier parte de tu texto.
+
+% AZULES (Corporativos y serios)
+\definecolor{BlueDark}{rgb}{0.00,0.22,0.62}    % Azul marino intenso
+\definecolor{BlueMedium}{rgb}{0.20,0.45,0.80}  % Azul medio
+\definecolor{BlueLight}{rgb}{0.27,0.51,0.71}   % Azul claro
+\definecolor{BlueSoft}{rgb}{0.60,0.75,0.90}    % Azul cielo suave
+
+% ROJOS (Para énfasis o alertas)
+\definecolor{RedDark}{rgb}{0.55,0.05,0.05}     % Rojo sangre oscuro
+\definecolor{RedAccent}{rgb}{0.75,0.15,0.15}   % Rojo intenso
+\definecolor{RedSoft}{rgb}{0.90,0.40,0.40}     % Rojo pastel
+\definecolor{RedBrick}{rgb}{0.60,0.20,0.20}    % Rojo ladrillo
+
+% VERDES (Naturaleza o positivo)
+\definecolor{GreenDark}{rgb}{0.00,0.45,0.25}   % Verde bosque
+\definecolor{GreenMedium}{rgb}{0.10,0.60,0.40} % Verde hierba
+\definecolor{GreenSoft}{rgb}{0.55,0.80,0.65}   % Verde menta
+\definecolor{GreenOlive}{rgb}{0.45,0.55,0.30}  % Verde oliva
+
+% OTROS (Amarillos, Morados, Grises)
+\definecolor{PurpleDark}{rgb}{0.35,0.15,0.50}
+\definecolor{PurpleMedium}{rgb}{0.55,0.35,0.70}
+\definecolor{GrayDark}{rgb}{0.25,0.25,0.25}    % Gris texto casi negro
+\definecolor{GrayMedium}{rgb}{0.50,0.50,0.50}
+\definecolor{GrayLight}{rgb}{0.85,0.85,0.85}   % Gris muy suave para fondos
+
+% NEUTROS
+\definecolor{White}{rgb}{1.00,1.00,1.00}
+\definecolor{BlackSoft}{rgb}{0.10,0.10,0.10}
+
+
+% ===========================================================================
+% --- 3. GEOMETRÍA Y PÁGINA ---
+% ===========================================================================
+% Configuración de los márgenes del papel
+
+\geometry{
+  left=25mm,     % Margen izquierdo
+  right=25mm,    % Margen derecho
+  top=30mm,      % Margen superior
+  bottom=40mm,   % Margen inferior
+  bindingoffset=0mm, % Margen extra para encuadernación
+  heightrounded  % Ajuste automático de altura
+}
+
+% Opción para impresión (añade margen de encuadernación si usas [print])
+\DeclareOption{print}{
+  \geometry{bindingoffset=10mm}
+}
+\ProcessOptions\relax
+
+% Ajustes de párrafos
+\setlength{\headheight}{52pt}     % Altura de la cabecera
+\setlength{\parindent}{0.25in}    % Sangría de primera línea
+\setlength{\textfloatsep}{0.5cm}  % Espacio alrededor de imágenes
+\parskip=0.15cm                   % Espacio entre párrafos
+\abovecaptionskip=0.15cm          % Espacio sobre los pies de foto
+\renewcommand{\baselinestretch}{1.05} % Interlineado (1.05 es cómodo de leer)
+
+% Fuentes
+\renewcommand{\familydefault}{\sfdefault} % Usar Sans-Serif por defecto
+
+% Evitar líneas viudas y huérfanas (líneas sueltas al final de página)
+\clubpenalty=10000
+\widowpenalty=10000
+
+
+% ===========================================================================
+% --- 4. VARIABLES DE DATOS (Autor, Título...) ---
+% ===========================================================================
+% Estos comandos capturan los datos que pones en config/datos.tex
+
+\renewcommand{\author}[1]{\def\alumno{#1}}
+\newcommand{\titulo}[1]{\def\tituloTFG{#1}}
+\newcommand{\director}[1]{\def\director{#1}}
+\newcommand{\curso}[1]{\def\curso{#1}}
+
+
+% ===========================================================================
+% --- 5. PORTADA Y MARCA DE AGUA ---
+% ===========================================================================
+\newcommand{\portada}{
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+
+% Fondo
+\node (fondo) [rectangle] 
+at (current page.center)
+{\parbox[b][\paperheight]{\paperwidth}{
+\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{recursos/FIGURAS/portada.jpg}
+}};
+
+% Imagen extra abajo a la derecha
+\node [anchor=south east, xshift=0cm, yshift=0cm] at (current page.south east)
+{\includegraphics[width=6cm]{ART-Y3.png}};
+
+% Título principal
+\node (titulo) [rectangle,text width=0.55\paperwidth,text centered, xshift=10pt] 
+at (fondo)
+{\parbox{0.71\paperwidth}{\centering 
+\fontsize{45}{50}\selectfont 
+}};
+
+
+% Datos
+\node [xshift=-230pt, yshift=-350-\hoffset,right] at (titulo)
+{\textbf{\sffamily\bfseries\fontsize{30}{40}\selectfont\color{white} avionics planification }};
+\node [xshift=-230pt, yshift=-375-\hoffset,right] at (titulo)
+{\textbf{\sffamily\bfseries\fontsize{30}{40}\selectfont\color{white}  and control documentation}};
+\node [xshift=110pt, yshift=375-\hoffset,right] at (titulo)
+{\textbf{\sffamily\bfseries\fontsize{30}{40}\selectfont\color{white} 2025-2026}};
+\end{tikzpicture}
+}
+
+% --- MARCA DE AGUA (Escudo de fondo) ---
+\newcommand\agua{
+\put(350,-320){
+\parbox[b][\paperheight]{\paperwidth}{
+\vfill
+% Aquí cambiamos la ruta a la imagen simple, asumimos que está en recursos/Figuras
+{\transparent{0.04}\includegraphics[width=10cm,height=\paperheight,keepaspectratio,angle=0]{ART-Y3.png}}
+\vfill}}}
+
+% Comando para activar la marca de agua en todo el documento
+\newcommand\marcagua{\ClearShipoutPicture\AddToShipoutPicture{\agua}}
+
+
+% ===========================================================================
+% --- 6. DISEÑO DE TÍTULOS (CAPÍTULOS Y SECCIONES) ---
+% ===========================================================================
+% Aquí puedes elegir colores DIFERENTES para cada nivel si quieres.
+
+% Estilo para SECCIONES (1.1)
+% Cambia 'BlueMedium' por el color que quieras (ej. RedDark)
+\titleformat{\section}
+{\normalfont\bfseries\scshape\color{BlackSoft}} 
+{\thesection}{1em}{#1}
+\titlespacing{\section}
+{0pt}{3.5ex plus .1ex minus .2ex}{1.5ex minus .1ex}
+
+% Estilo para SUB-SECCIONES (1.1.1)
+% Cambia 'BlueMedium' por el color que quieras (ej. GreenDark)
+\titleformat{\subsection}
+{\normalfont\bfseries\color{BlackSoft}}
+{\thesubsection}{1em}{#1}
+\titlespacing{\subsection}
+{0pt}{1.5ex plus .1ex minus .2ex}{1.5ex minus .1ex}
+
+% Estilo para CAPÍTULOS
+\titleformat{\chapter}
+  {\gdef\chapterlabel{}}
+  {\gdef\chapterlabel{\thechapter\ }}
+  {0pt}
+  { % Inicio del formato del capítulo
+   \begin{flushright}
+     % Título del capítulo (Cambia 'BlueDark' por tu color favorito)
+     {\normalfont\huge\bfseries\scshape\color{BlackSoft}
+      \chapterlabel #1  \thispagestyle{plain}\\ 
+      % Línea horizontal debajo del título
+      \color{BlackSoft}\rule{\linewidth}{0.8mm} 
+     }
+   \end{flushright}
+  }
+\titlespacing*{\chapter}{0pt}{40pt}{0pt}
+
+
+% ===========================================================================
+% --- 7. CABECERAS Y PIES DE PÁGINA ---
+% ===========================================================================
+
+% Definición de las líneas decorativas de cabecera y pie
+% Cambia 'BlueDark' aquí si quieres que las líneas sean de otro color
+\newcommand{\HRule}{\color{BlackSoft}\rule{\linewidth}{0.8mm}}  
+\newcommand{\FRule}{\color{BlackSoft}\rule{\linewidth}{0.8mm}}  
+
+% Estilo de página 'cab' (El principal del documento)
+\fancypagestyle{cab}{ 
+  \fancyhf{} % Limpia todo antes de empezar
+  
+  % --- Cabecera ---
+  % Logo a la derecha (ajusta la ruta 'logos/' si es necesario)
+  %\fancyhead[R]{ \includegraphics[width=0.2\textwidth]{} } 
+  % Título del capítulo a la izquierda (en Azul Oscuro)
+  \fancyhead[L]{{\color{BlackSoft} \footnotesize \leftmark}}
+  
+  % --- Pie de página ---
+  % Número de página a la derecha
+  \fancyfoot[R]{\color{BlackSoft} \thepage} 
+  % Título de la sección actual a la izquierda
+  \fancyfoot[L]{ \footnotesize \color{BlackSoft} {\rightmark} }
+  
+  % Configuración de las líneas
+  \renewcommand{\headrulewidth}{0.0 mm} % Quitamos la línea por defecto de fancyhdr...
+  \renewcommand{\footrulewidth}{0.0 mm}
+  \renewcommand{\headrule}{\HRule}      % ... y usamos la nuestra personalizada (\HRule)
+  \renewcommand{\footrule}{\FRule}
+}
+
+% Estilo 'plain' (Se usa automáticamente en la primera página de cada capítulo)
+\fancypagestyle{plain}{ 
+  \fancyhf{}
+  \fancyfoot[R]{\color{BlackSoft} \thepage}
+  \fancyfoot[L]{\footnotesize \color{BlackSoft} {\leftmark }} 
+  \renewcommand{\headrulewidth}{0.0 mm} 
+  \renewcommand{\footrulewidth}{0.0 mm}
+  \renewcommand{\footrule}{\FRule} % Solo línea abajo
+}
+
+% ===========================================================================
+%                           FIN DEL ARCHIVO UAL.STY
+% ===========================================================================

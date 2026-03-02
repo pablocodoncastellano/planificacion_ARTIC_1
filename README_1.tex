@@ -1,0 +1,79 @@
+==============================================================================
+            GUÍA DE ARQUITECTURA Y USO DEL PROYECTO LATEX (TFG)
+==============================================================================
+
+1. ESTRUCTURA DE CARPETAS
+------------------------------------------------------------------------------
+El proyecto sigue una arquitectura modular "Árbol". El archivo raíz es el director
+y el contenido está ordenado en la carpeta 'recursos'.
+
+PROYECTO/
+├── main.tex                <-- NO TOCAR MUCHO. Solo orquesta los archivos.
+├── LEEME.txt               <-- Este archivo.
+└── recursos/               <-- AQUÍ ESTÁ TODO EL CONTENIDO REAL
+    ├── capitulos/          <-- Tus capítulos (Introducción, Desarrollo...)
+    ├── config/             <-- Configuración técnica
+    │   ├── UAL.sty         <-- Diseño visual (Colores, Cabeceras, Portada)
+    │   ├── datos.tex       <-- Título, Autores, Tutores, Curso
+    │   ├── paquetes.tex    <-- Lista de \usepackage (Librerías)
+    │   └── codigo.sty      <-- Configuración para mostrar código (Python)
+    ├── frontmatter/        <-- Resumen e Índices
+    ├── backmatter/         <-- Apéndices y Contraportada
+    ├── Figuras/            <-- Todas tus imágenes van aquí
+    └── referencias.bib     <-- Archivo de bibliografía
+
+------------------------------------------------------------------------------
+2. GUÍABURROS: ¿CÓMO HAGO... ?
+------------------------------------------------------------------------------
+
+[A] ... CAMBIAR MIS DATOS (AUTOR, TÍTULO)
+    Ve a: recursos/config/datos.tex
+    Ahí puedes cambiar los nombres de los alumnos, directores y título del TFG.
+    Se actualizarán automáticamente en la portada.
+
+[B] ... ESCRIBIR O AÑADIR UN CAPÍTULO NUEVO
+    1. Crea un archivo .tex nuevo en: recursos/capitulos/ (ej: 04-resultados.tex).
+    2. Escribe tu contenido dentro.
+    3. Ve a 'main.tex' y busca la zona "CUERPO DEL TRABAJO".
+    4. Añade la línea: \input{recursos/capitulos/04-resultados}
+
+[C] ... CAMBIAR LOS COLORES DEL DOCUMENTO
+    Ve a: recursos/config/UAL.sty
+    Busca la sección "PALETA DE COLORES" para ver los disponibles.
+    Baja a la sección "DISEÑO DE TÍTULOS" o "CABECERAS".
+    Cambia el color (ej: 'BlueDark') por otro (ej: 'RedAccent').
+    ¡Todo el documento cambiará automáticamente!
+
+[D] ... INSERTAR UNA IMAGEN
+    Sube la imagen a la carpeta: recursos/Figuras/
+    En tu texto usa: \includegraphics[width=...]{nombre_imagen.png}
+    IMPORTANTE: NO escribas la ruta "recursos/Figuras/...", solo el nombre.
+    LaTeX ya sabe dónde buscar gracias al comando \graphicspath en el main.
+
+[E] ... AÑADIR REFERENCIAS BIBLIOGRÁFICAS
+    1. Busca la cita en Google Scholar -> Citar -> BibTeX.
+    2. Pega el código en: recursos/referencias.bib
+    3. En tu texto cita usando: \cite{clave_de_la_cita}
+
+[F] ... PEGAR CÓDIGO (PYTHON/C)
+    Usa el entorno lstlisting:
+    \begin{lstlisting}[language=Python, caption={Descripción}]
+       print("Hola Mundo")
+    \end{lstlisting}
+
+------------------------------------------------------------------------------
+3. SOLUCIÓN DE PROBLEMAS COMUNES
+------------------------------------------------------------------------------
+
+* ERROR: "File `nombre_imagen.png` not found"
+  -> Verifica mayúsculas/minúsculas. "Foto.png" no es igual a "foto.png".
+  -> Verifica que la imagen esté dentro de recursos/Figuras.
+
+* ERROR: La compilación se rompe tras borrar archivos temporales
+  -> Overleaf a veces guarda "basura". Dale a "Recompile from scratch" (en el
+     menú del botón verde de recompilar).
+
+* ERROR: Los colores salen negros
+  -> Verifica en UAL.sty que no has borrado la definición de colores al principio.
+
+==============================================================================
