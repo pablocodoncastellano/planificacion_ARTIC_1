@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.17)  5 MAR 2026 14:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.17)  5 MAR 2026 14:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1239,23 +1239,15 @@ Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 41.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
  [13]
 Cap\'{\i }tulo 8.
-recursos/CAPITULOS/capitulo7/M6.tex:74: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
-File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
-<use recursos/FIGURAS/ART-Y3.png>
-Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 74.
-(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
- [14
-
-]
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
 File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 79.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
- [15]
+[14
+
+]
 Cap\'{\i }tulo 9.
 LaTeX Info: Redefining \. on input line 107.
 LaTeX Info: Redefining \% on input line 107.
@@ -1263,7 +1255,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 107.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
-[16
+[15
 
 ]
 LaTeX Info: Redefining \. on input line 114.
@@ -1274,7 +1266,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 114.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
- [17]
+ [16]
 Cap\'{\i }tulo 10.
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
@@ -1282,7 +1274,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 139.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
-[18
+[17
 
 ]
 Cap\'{\i }tulo 11.
@@ -1292,7 +1284,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 157.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
-[19
+[18
 
 ]
 Cap\'{\i }tulo 12.
@@ -1308,7 +1300,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 35.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
- [20
+ [19
 
 ]
 LaTeX Info: Redefining \. on input line 35.
@@ -1319,7 +1311,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 35.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
- [21] (c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.aux
+ [20] (c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 LaTeX Info: Redefining \. on input line 10.
@@ -1333,17 +1325,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FFF43B256BF453D30F50A80AA18F1FFB;12087.
  ) 
 Here is how much of TeX's memory you used:
- 30865 strings out of 467871
- 592555 string characters out of 5418376
- 1168758 words of memory out of 5000000
+ 30864 strings out of 467871
+ 592547 string characters out of 5418376
+ 1168757 words of memory out of 5000000
  59026 multiletter control sequences out of 15000+600000
  676858 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,15n,97p,786b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\pablo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.pdf" (25 pages, 613760 bytes).
+Output written on "c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.pdf" (24 pages, 612545 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
  359 words of extra memory for PDF output out of 10000 (max. 10000000)
 
