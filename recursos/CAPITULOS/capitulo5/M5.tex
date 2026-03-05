@@ -1,39 +1,14 @@
 % -------------------------------------------------------------------
-\chapter{EPS Línea de Tiempo de Tareas}
+\chapter{Línea de Tiempo de Tareas y Dependencias}
 
-Esta es la ruta crítica técnica. El avance a la siguiente fase está estrictamente condicionado a la aprobación del entregable de la fase anterior:
+\noindent Esta es la ruta crítica técnica basada en los Paquetes de Trabajo (WP). El avance está condicionado a la aprobación del entregable anterior:
 
 \begin{enumerate}
-    \item \textbf{Definición de Requisitos y Restricciones:} Establecer la base del diseño.
-    \begin{itemize}
-        \item \textit{Hito:} Aprobación del \textbf{SRD} (Líderes) y del \textbf{Mechanical ICD} (Agentes Dobles).
-    \end{itemize}
-    \item \textbf{Presupuesto de Potencia:} Cuantificar la demanda de energía.
-    \begin{itemize}
-        \item \textit{Hito:} Cierre del \textbf{Power Budget Master} (Líderes y SART). \textbf{ESTO DEFINE LA NECESIDAD REAL.}
-    \end{itemize}
-    \item \textbf{Selección de Componentes:} Buscar la solución comercial al problema planteado.
-    \begin{itemize}
-        \item \textit{Hito:} Entrega del \textbf{Trade-Off Report} y aprobación del \textbf{BOM Preliminar} (Asignatura).
-    \end{itemize}
-    \item \textbf{Simulación Física (Fase 1 - Teórica):} Validar la topología matemática.
-    \begin{itemize}
-        \item \textit{Hito:} Entrega del \textbf{PSIM Simulation Report v1.0} con componentes ideales (Asignatura).
-    \end{itemize}
-    \item \textbf{Desarrollo Lógico y Simulación Física (Fase 2 - Real):} Definir la inteligencia y probar la robustez del hardware frente a fallos.
-    \begin{itemize}
-        \item \textit{Hito:} Entrega del \textbf{State Machine Diagram} (SART) y del \textbf{PSIM Simulation Report v2.0} (Asignatura).
-    \end{itemize}
-    \item \textbf{Definición de Interfaces OBC:} Conectar el cerebro con el resto del satélite.
-    \begin{itemize}
-        \item \textit{Hito:} Publicación del \textbf{Interface Control Document - ICD} (SART).
-    \end{itemize}
-    \item \textbf{Captura de Esquemáticos y Revisión Crítica:} Diseño formal en ECAD y auditoría de seguridad.
-    \begin{itemize}
-        \item \textit{Hito:} Ejecución de la revisión y firma del \textbf{CDR Acta} (Todos).
-    \end{itemize}
-    \item \textbf{Cierre de Diseño:} Generación de archivos de fabricación y memorias.
-    \begin{itemize}
-        \item \textit{Hito:} Entrega del \textbf{Schematics Package} (Asignatura).
-    \end{itemize}
+    \item \textbf{Definición de Misión [WP 1000] y Especificaciones Mecánicas [WP 3020]:} Establecer la base del diseño y el sensor de carga útil.
+    \item \textbf{Especificaciones Eléctricas [WP 3030]:} Cierre del Excel de consumos (\textit{Power Budget}).
+    \item \textbf{Búsqueda de Componentes [WP 2030]:} Selección comercial basada en el presupuesto de potencia.
+    \item \textbf{Ensayos Preliminares de Validación [WP 2040]:} Simulación en PSIM (Fase teórica y Fase realista con protecciones).
+    \item \textbf{Especificaciones Operacionales y Generales [WP 3040 / 3010]:} Diagramas de estados y definición de interfaces (ICD).
+    \item \textbf{Diseño de Unidad de Vuelo [WP 2020]:} Captura formal de esquemáticos en KiCad.
+    \item \textbf{Requisitos de Ensayo [WP 4000]:} Redacción en paralelo del documento teórico de validación ambiental.
 \end{enumerate}
