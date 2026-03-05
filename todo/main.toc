@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {1.3}Estructura de Recursos Humanos}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Plan Maestro Técnico (Niveles de Desarrollo)}{2}{section.1.4}%
 \contentsline {chapter}{\numberline {2}EPS Listado de Entregables Documentales}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Requisitos y Arquitectura de Sistema (Líderes)}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Requisitos y Arquitectura de Sistema (Líderes y Agentes Dobles)}{4}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Diseño Electrónico Hardware (Equipo Asignatura)}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Diseño Lógico e Integración (Equipo SART)}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Diseño Lógico, Integración y Ensayos (Equipo SART)}{5}{section.2.3}%
 \contentsline {chapter}{\numberline {3}EPS Análisis y Gestión de Riesgos}{6}{chapter.3}%
 \contentsline {section}{\numberline {3.1} Cambios de Consumo de los Subsistemas}{6}{section.3.1}%
 \contentsline {section}{\numberline {3.2} Indisponibilidad de Componentes (Supply Chain)}{6}{section.3.2}%
@@ -25,3 +25,22 @@
 \contentsline {section}{\numberline {6.1}Mes 1: Requisitos, Presupuesto y Selección}{10}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Mes 2: Simulación Avanzada y Definición de Interfaces}{10}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Mes 3: Esquemáticos y Cierre}{10}{section.6.3}%
+\contentsline {chapter}{\numberline {7}OBC Resumen Ordenado de la Situación Actual}{12}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Punto de Partida}{12}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Plan Maestro Técnico (Niveles de Desarrollo)}{12}{section.7.2}%
+\contentsline {chapter}{\numberline {8}OBC Listado de Entregables Documentales}{14}{chapter.8}%
+\contentsline {chapter}{\numberline {9}OBC Análisis y Gestión de Riesgos}{16}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Cambios de Interfaces (ICD) por Evolución de Subsistemas}{16}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Arranque No Robusto (Reset/Clock/Boot) y Fallos de Supervisión}{16}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Complejidad del Software de Vuelo y FDIR Insuficiente}{16}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Interferencias EMI/ESD y Robustez de Interfaz}{17}{section.9.4}%
+\contentsline {chapter}{\numberline {10}OBC Separación de Roles Optimizada}{18}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Líderes de Proyecto (Ingeniería de Sistemas)}{18}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Equipo de la Asignatura (Contratista de Hardware)}{18}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Equipo S-ART (Arquitectos de Lógica y Misión)}{18}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Agentes Dobles (Especialistas de COMMS/ADCS/Payload/EPS)}{18}{section.10.4}%
+\contentsline {chapter}{\numberline {11}OBC Línea de Tiempo de Tareas}{19}{chapter.11}%
+\contentsline {chapter}{\numberline {12}OBC Planificación Semanal a 3 Meses}{20}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Mes 1: Requisitos, Arquitectura e Interfaces}{20}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Mes 2: Esquemáticos por Bloques y Plan de Verificación}{20}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Mes 3: Layout (si aplica), Cierre Documental e Integración}{20}{section.12.3}%

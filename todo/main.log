@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.17)  2 MAR 2026 20:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.17)  5 MAR 2026 13:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -993,12 +993,12 @@ Package hyperref Info: Link coloring ON on input line 18.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count413
-<recursos/FIGURAS/portada.jpg, id=98, 720.6925pt x 1027.84pt>
+<recursos/FIGURAS/portada.jpg, id=174, 720.6925pt x 1027.84pt>
 File: recursos/FIGURAS/portada.jpg Graphic file (type jpg)
 <use recursos/FIGURAS/portada.jpg>
 Package pdftex.def Info: recursos/FIGURAS/portada.jpg  used on input line 23.
 (pdftex.def)             Requested size: 592.53323pt x 845.06133pt.
-<recursos/FIGURAS/ART-Y3.png, id=99, 418.56375pt x 402.75468pt>
+<recursos/FIGURAS/ART-Y3.png, id=175, 418.56375pt x 402.75468pt>
 File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 23.
@@ -1036,21 +1036,25 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 3.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 5.
-)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 30.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 30.
+LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
+(Font)              scaled to size 10.40245pt on input line 30.
+ [2
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 10.
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 10.
-LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 10.
- [2
-
-] (c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.lof
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+ [3] (c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
@@ -1062,7 +1066,7 @@ LaTeX Info: Redefining \% on input line 2.
 )
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
- [3
+ [4
 
 ] (recursos/CAPITULOS/maestro.tex (recursos/CAPITULOS/capitulo0/M0.tex) (recursos/CAPITULOS/capitulo1/M1.tex
 Cap\'{\i }tulo 1.
@@ -1109,81 +1113,36 @@ Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 4.
  [3]
 Cap\'{\i }tulo 2.
 (recursos/CAPITULOS/capitulo2/sec2.1.tex
-Underfull \hbox (badness 4569) in paragraph at lines 17--17
-[]|\T1/phv/b/n/10.95 Auditoria pro-yec-to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
-[]|\T1/phv/b/n/10.95 System Re-qui-re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
-\T1/phv/b/n/10.95 ments Do-cu-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
-[]|\T1/phv/b/n/10.95 Mechanical ICD
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\T1/phv/m/n/10.95 DXF /
  []
 
-LaTeX Info: Redefining \. on input line 19.
-LaTeX Info: Redefining \% on input line 19.
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
 File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
-Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 19.
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 18.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
 [4
 
 ]
-Underfull \hbox (badness 4353) in paragraph at lines 34--34
+Underfull \hbox (badness 5607) in paragraph at lines 31--31
+[]|\T1/phv/b/n/10.95 [WP 2030] Trade-Off
+ []
+
+
+Underfull \hbox (badness 4353) in paragraph at lines 31--31
 []|\T1/phv/m/n/10.95 Notion /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-[]|\T1/phv/b/n/10.95 Bill of Ma-te-rials
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-[]|\T1/phv/b/n/10.95 PSIM Si-mu-la-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
-[]|\T1/phv/b/n/10.95 PSIM Si-mu-la-tion
- []
-
-
-Underfull \hbox (badness 1436) in paragraph at lines 34--34
-[]|\T1/phv/b/n/10.95 Schematics Pac-ka-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
 []|\T1/phv/m/n/10.95 PDF /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
-[]|\T1/phv/b/n/10.95 Interface Con-trol
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 49--49
-[]|\T1/phv/b/n/10.95 CDR Ac-ta (Cri-ti-cal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
-[]|\T1/phv/m/n/10.95 PDF /
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T1/phv/b/n/10.95 [WP 3010] In-ter-fa-ce
  []
 
 )) (recursos/CAPITULOS/capitulo3/M3.tex
@@ -1250,7 +1209,108 @@ Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 22.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
  [10
 
-])))
+])) (recursos/CAPITULOS/capitulo7/M6.tex
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 11.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+ [11]
+Cap\'{\i }tulo 7.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 35.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+[12
+
+]
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 41.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+ [13]
+Cap\'{\i }tulo 8.
+recursos/CAPITULOS/capitulo7/M6.tex:74: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 74.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+ [14
+
+]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 79.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+ [15]
+Cap\'{\i }tulo 9.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 107.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+[16
+
+]
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 114.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+ [17]
+Cap\'{\i }tulo 10.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 139.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+[18
+
+]
+Cap\'{\i }tulo 11.
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 157.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+[19
+
+]
+Cap\'{\i }tulo 12.
+
+Overfull \hbox (8.04698pt too wide) in paragraph at lines 162--163
+[]\T1/phv/b/n/10.95 Semana 2: \T1/phv/m/n/10.95 Cie-rre de \T1/phv/b/n/10.95 OBC-ICD v0.1\T1/phv/m/n/10.95 : lis-ta-do de se-�a-les y bu-ses con EPS/COMMS/ADCS/Payload
+ []
+
+))
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
+File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
+<use recursos/FIGURAS/ART-Y3.png>
+Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 35.
+(pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
+ [20
+
+]
 LaTeX Info: Redefining \. on input line 35.
 LaTeX Info: Redefining \% on input line 35.
 LaTeX Info: Redefining \. on input line 35.
@@ -1259,7 +1319,7 @@ File: recursos/FIGURAS/ART-Y3.png Graphic file (type png)
 <use recursos/FIGURAS/ART-Y3.png>
 Package pdftex.def Info: recursos/FIGURAS/ART-Y3.png  used on input line 35.
 (pdftex.def)             Requested size: 284.52377pt x 273.77737pt.
- [11] (c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.aux
+ [21] (c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 LaTeX Info: Redefining \. on input line 10.
@@ -1270,20 +1330,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4C11332F2BB6D81BA23F7CF6A9375EDF;6288.
+(rerunfilecheck)             Checksum: 05AFB015BFEB25BA49D19969DABE495B;12029.
  ) 
 Here is how much of TeX's memory you used:
- 30796 strings out of 467871
- 591172 string characters out of 5418376
- 1170758 words of memory out of 5000000
- 58999 multiletter control sequences out of 15000+600000
+ 30866 strings out of 467871
+ 592562 string characters out of 5418376
+ 1168758 words of memory out of 5000000
+ 59026 multiletter control sequences out of 15000+600000
  676858 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,14n,97p,786b,709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,15n,97p,786b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\pablo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.pdf" (14 pages, 576089 bytes).
+Output written on "c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.pdf" (25 pages, 614689 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 359 words of extra memory for PDF output out of 10000 (max. 10000000)
 

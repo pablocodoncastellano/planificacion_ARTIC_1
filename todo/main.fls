@@ -437,7 +437,6 @@ INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-OUTPUT c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.toc
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvrc8t.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvbc8t.vf
@@ -452,6 +451,7 @@ INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvrc8t.vf
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+OUTPUT c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.toc
 INPUT c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.lof
 INPUT c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.lof
 INPUT c:\Users\pablo\OneDrive - Universidad Rey Juan Carlos\UNIVERSIDAD\OTRO\COSMOS\SART ( AVIONICA)\DOCUMENTACION\DOCUMENTACIÓN REDACTADA\ORGANIZACIÓN\ARCHIVOS COMPLETOS\AVIONICS PLANIFICATION AND CONTROL DOCUMENTATION\todo\main.lof
@@ -537,6 +537,39 @@ INPUT .\recursos\FIGURAS\ART-Y3.png
 INPUT .\recursos\CAPITULOS\capitulo6\sec6.1.tex
 INPUT .\recursos\CAPITULOS\capitulo6\sec6.1.tex
 INPUT recursos\CAPITULOS\capitulo6\sec6.1.tex
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\CAPITULOS\capitulo7\M6.tex
+INPUT .\recursos\CAPITULOS\capitulo7\M6.tex
+INPUT recursos\CAPITULOS\capitulo7\M6.tex
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
+INPUT .\recursos\FIGURAS\ART-Y3.png
 INPUT .\recursos\FIGURAS\ART-Y3.png
 INPUT .\recursos\FIGURAS\ART-Y3.png
 INPUT .\recursos\FIGURAS\ART-Y3.png

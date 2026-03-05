@@ -1,50 +1,47 @@
 
-\noindent Para asegurar un avance controlado, auditable y evitar cuellos de botella entre los equipos, la documentación se ha desglosado en entregables intermedios y finales. Esto permite validar fases críticas antes de invertir horas de diseño en la siguiente etapa. Los entregables se dividen por categorías funcionales:
+\noindent Para asegurar un avance controlado y alinear nuestro flujo de trabajo con los Paquetes de Trabajo (Work Packages - WP) exigidos por la coordinación, la documentación se ha desglosado en los siguientes entregables formales.
 
-\section{Requisitos y Arquitectura de Sistema (Líderes)}
-\noindent Documentos fundamentales que establecen las reglas del juego antes de comenzar cualquier diseño electrónico.
+\section{Requisitos y Arquitectura de Sistema (Líderes y Agentes Dobles)}
+\noindent Documentos fundamentales que establecen las reglas del juego antes de comenzar el diseño electrónico.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X >{\hsize=0.3\hsize}X >{\hsize=2.0\hsize}X}
+\begin{tabularx}{\textwidth}{>{\hsize=0.8\hsize}X >{\hsize=0.3\hsize}X >{\hsize=1.9\hsize}X}
 \toprule
 \textbf{Entregable} & \textbf{Formato} & \textbf{Descripción} \\ \midrule
-\textbf{Auditoria proyecto anterior} & PDF & Revisión crítica del proyecto del equipo de años anteriores, valorar que parte del proyecto es de utilidad y que no es necesario. \\
-\textbf{System Requirements Document (SRD)} & PDF & Requisitos de alto nivel: voltajes, corrientes límite, parámetros orbitales y modos de fallo. Base inamovible del diseño. \\ 
-\textbf{Power Budget Master} & Excel & Hoja de cálculo con los consumos pico y medio de todos los subsistemas. \textbf{Requisito previo estricto} para el Trade-Off. \\ 
-\textbf{Mechanical ICD (Restricciones Físicas)} & DXF / PDF & Definición del volumen de la PCB, posiciones de montaje y altura máxima (aportado por los agentes dobles de Estructuras). \\ \bottomrule
+\textbf{[WP 1000] System Requirements Document (SRD)} & PDF & Requisitos de misión (1010), normativa aplicable (1020) y herramientas (1030). Incluye la definición del sensor de basura espacial. \\ 
+\textbf{[WP 3030] Power Budget Master} & Excel & Especificaciones eléctricas. Hoja de cálculo con consumos de todos los subsistemas. \textbf{Requisito previo para el Trade-Off.} \\ 
+\textbf{[WP 3020] Mechanical ICD} & DXF / PDF & Especificaciones mecánicas. Restricciones de volumen y montaje aportadas por el equipo de Estructuras. \\ \bottomrule
 \end{tabularx}
 \end{table}
 \clearpage
 \section{Diseño Electrónico Hardware (Equipo Asignatura)}
-\noindent Documentación que justifica y refleja el diseño físico, desde la elección del primer chip hasta el plano eléctrico final.
+\noindent Documentación que justifica y refleja el diseño físico de la unidad de vuelo.
 
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X >{\hsize=0.3\hsize}X >{\hsize=2.0\hsize}X}
+\begin{tabularx}{\textwidth}{>{\hsize=0.8\hsize}X >{\hsize=0.3\hsize}X >{\hsize=1.9\hsize}X}
 \toprule
 \textbf{Entregable} & \textbf{Formato} & \textbf{Descripción} \\ \midrule
-\textbf{Trade-Off Report} & Notion / PDF & Memoria justificativa de la selección de reguladores (ej. LTC3130), sensores y protecciones frente a alternativas comerciales. \\ 
-\textbf{Bill of Materials (BOM) Preliminar} & Excel & Listado inicial de componentes con números de parte (MPN), encapsulados, disponibilidad en stock y precio para validación técnica. \\ 
-\textbf{PSIM Simulation Report (v1.0 Ideal)} & PDF & Validación virtual rápida de la topología matemática de potencia usando componentes y medidores ideales. \\ 
-\textbf{PSIM Simulation Report (v2.0 Real)} & PDF & Validación avanzada con modelos no ideales, integrando picos de arranque, actuación de Load Switches y transitorios térmicos. \\ 
-\textbf{Schematics Package} & PDF / Netlist & Planos eléctricos finales en ECAD (KiCad/Altium) organizados jerárquicamente por bloques. Incluye la auditoría ERC (Electrical Rules Check). \\ \bottomrule
+\textbf{[WP 2030] Trade-Off Report y BOM} & Notion / Excel & Búsqueda de materiales y componentes. Justificación técnica de la selección de reguladores, sensores y protecciones. \\ 
+\textbf{[WP 2040] PSIM Simulation Reports} & PDF & Ensayos preliminares para validación. Validación virtual de la topología de potencia, picos de arranque y transitorios. \\ 
+\textbf{[WP 2020] Schematics Package} & PDF / Netlist & Diseño de la unidad de vuelo. Planos eléctricos finales en ECAD (KiCad/Altium) organizados por bloques jerárquicos. \\ \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Diseño Lógico e Integración (Equipo SART)}
-\noindent Documentos que definen el "cerebro" del sistema y cómo el EPS se comunica con el Ordenador de a Bordo (OBC).
+\section{Diseño Lógico, Integración y Ensayos (Equipo SART)}
+\noindent Documentos que definen el "cerebro" del sistema y la filosofía de validación ambiental.
 
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X >{\hsize=0.3\hsize}X >{\hsize=2.0\hsize}X}
+\begin{tabularx}{\textwidth}{>{\hsize=0.8\hsize}X >{\hsize=0.3\hsize}X >{\hsize=1.9\hsize}X}
 \toprule
 \textbf{Entregable} & \textbf{Formato} & \textbf{Descripción} \\ \midrule
-\textbf{State Machine Diagram} & Draw.io / PDF & Diagrama de flujo visual que mapea los estados del EPS (Nominal, Eclipse, Safe Mode, Critical Fault) y sus condiciones lógicas de transición. \\ 
-\textbf{Interface Control Document (ICD)} & Excel & Documento de conexión absoluta. Contiene el mapeo exacto de pines (Pinout), líneas ADC/GPIO, frecuencias I2C/SPI y matriz de comandos OBC-EPS. \\ 
-\textbf{CDR Acta (Critical Design Review)} & PDF / Notion & Acta formal de la reunión donde el equipo SART y los Líderes auditan los esquemas de la Asignatura antes de darlos por válidos, registrando fallos y correcciones. \\ \bottomrule
+\textbf{[WP 3040] State Machine Diagram} & Draw.io / PDF & Especificaciones operacionales. Flujo visual de los estados del EPS (Nominal, Eclipse, Safe Mode). \\ 
+\textbf{[WP 3010] Interface Control Doc. (ICD)} & Excel & Especificaciones generales de conexión. Mapeo de pines (Pinout), líneas ADC/GPIO y matriz de comandos OBC-EPS. \\ 
+\textbf{[WP 4000] Test Philosophy Report} & PDF & Documento teórico de requisitos de ensayo. Define la filosofía (4010) y los perfiles teóricos de vibración (4020), vacío térmico (4030) y choque (4040). \\ \bottomrule
 \end{tabularx}
 \end{table}
